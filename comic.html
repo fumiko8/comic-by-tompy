@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="utf-8">
+      <title>Комикс</title>
+	  <link href="index.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+
+		  <style>
+			@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+			body {  
+			color: #B9B5C7; 
+			font-family: 14px 'Open Sans', sans-serif;
+			background: linear-gradient(
+				to left,
+				#101656,
+				#1c81a5,
+				#22b431,
+				#1c81a5,
+				#101656
+			);
+			background-size: 400% 400%;
+			animation: gradientTranisition 60s linear infinite;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			
+			}
+
+			@keyframes gradientTranisition {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 200% 50%;
+			}
+			}
+
+			.card {
+			background: #191c29;
+			width: 950px;
+			height: 700px;
+			padding: 3px;
+			position: relative;
+			border-radius: 6px;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			display: flex;
+			font-size: 1.5em;
+			color: rgba(255, 255, 255, 0.844);
+			cursor: pointer;
+			font-family: cursive;
+			}
+			
+		  </style>
+          <div class="card">
+					
+					<div class="mySlides fade">
+					  <h1 class="text">Created by Tompy</h1>
+					  <div class="numbertext">1 / 7</div>
+					  <img src="comic1.PNG" style="width:100%">
+					</div>
+					
+					<div class="mySlides fade">
+					  <h1 class="text">The greater the power...</h1>
+					  <div class="numbertext">2 / 7</div>
+					  <img src="comic2.PNG" style="width:100%">
+					</div>
+					
+					<div class="mySlides fade">
+					  <h1 class="text">The greater the power...</h1>
+					  <div class="numbertext">3 / 7</div>
+					  <img src="comic3.PNG" style="width:100%">
+					</div>
+					<div class="mySlides fade">
+						<h1 class="text">The greater the power...</h1>
+						<div class="numbertext">4 / 7</div>
+						<img src="comic4.PNG" style="width:100%">
+					</div>
+					<div class="mySlides fade">
+						<h1 class="text">The greater the power...</h1>
+						<div class="numbertext">5 / 7</div>
+						<img src="comic5.PNG" style="width:100%">
+					</div>
+					<div class="mySlides fade">
+						<h1 class="text">...</h1>
+						<div class="numbertext">6 / 7</div>
+						<img src="comic6.PNG" style="width:100%">
+					</div>
+					<div class="mySlides fade">
+						<h1 class="text">...the more dangerous the abuse.</h1>
+						<div class="numbertext">7 / 7</div>
+						<img src="comic7.PNG" style="width:100%">
+					</div>
+					
+					
+					</div>
+					<br>
+					
+					<div style="text-align:center">
+					  <span class="dot" onclick="currentSlide(1)"></span> 
+					  <span class="dot" onclick="currentSlide(2)"></span> 
+					  <span class="dot" onclick="currentSlide(3)"></span> 
+					  <span class="dot" onclick="currentSlide(4)"></span>
+					  <span class="dot" onclick="currentSlide(5)"></span>
+					  <span class="dot" onclick="currentSlide(6)"></span>
+					  <span class="dot" onclick="currentSlide(7)"></span> 
+					</div></div>
+          
+    			  <script>
+						var slideIndex = 0;
+						showSlides();
+						
+						function showSlides() {
+							var i;
+							var slides = document.getElementsByClassName("mySlides");
+							var dots = document.getElementsByClassName("dot");
+							for (i = 0; i < slides.length; i++) {
+							   slides[i].style.display = "none";  
+							}
+							slideIndex++;
+							if (slideIndex > slides.length) {slideIndex = 1}    
+							for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+							}
+							slides[slideIndex-1].style.display = "block";  
+							dots[slideIndex-1].className += " active";
+							setTimeout(showSlides, 5000); 
+						}
+						</script>
+			</div>
+  </body>
+</html>
